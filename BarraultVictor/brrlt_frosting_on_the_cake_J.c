@@ -9,19 +9,23 @@ int main(int argc, char const *argv[]) {
 	fgets(a, (n*2)+1, stdin);
 	fgets(b, n*2, stdin);
 	int a_tab[n], b_tab[n], res_tab[3];
+	memset(a_tab, 0, n);
+	memset(b_tab, 0, n);
+	memset(res_tab, 0, 3);
 	char *token = strtok(a, " ");
-	for(int i = 0; i < n; i++){
+	int i, j;
+	for(i = 0; i < n; i++){
 		a_tab[i] = atoi(token);
 		token = strtok(NULL, " ");
 	}
 	token = strtok(b, " ");
-	for(int i = 0; i < n; i++){
+	for(i = 0; i < n; i++){
 		b_tab[i] = atoi(token);
 		token = strtok(NULL, " ");
 	}
 
-	for(int i = 0; i < n; i++){
-		for (int j = 0; j < n; j++){
+	for(i = 0; i < n; i++){
+		for (j = 0; j < n; j++){
 			res_tab[(i+j)%3] += a_tab[i]*b_tab[j];
 		}
 	}
