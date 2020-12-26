@@ -13,11 +13,10 @@ def frosting_cake():
 		for j in range(i, n, 3) :
 			store_b[i] += b_t[j]
 			store_a[i] += a_t[j]
-	res = [store_b[2]*store_a[2]+store_b[0]*store_a[1]+store_b[1]*store_a[0],
+	res = [store_b[2]*store_a[2]+store_b[0]*store_a[2]+store_b[1]*store_a[0],
 		store_b[2]*store_a[0]+store_b[0]*store_a[2]+store_b[1]*store_a[1],
         store_b[2]*store_a[1]+store_b[0]*store_a[0]+store_b[1]*store_a[2]]
-	print(res[0], res[1], res[2]);
-
+	print(res[0], res[1], res[2], "GRUEIGREGREGBERM\n");
 
 if __name__ == '__main__':
     frosting_cake();
