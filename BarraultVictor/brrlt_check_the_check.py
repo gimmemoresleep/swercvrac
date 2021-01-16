@@ -5,7 +5,7 @@ def check_the_cheque():
 	while(input() != "TOTAL"):
 		inp = input()
 		res = res + int(inp.split()[0]) * int(inp.split()[1])
-	if res <= int(input()) :
+	if res < int(input()) :
 		print("PROTEST")
 	else :
 		print("PAY")
